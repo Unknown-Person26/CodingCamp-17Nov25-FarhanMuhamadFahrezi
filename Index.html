@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <script src="https://kit.fontawesome.com/79e2efa57f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="flex items-center justify-between flex-wrap bg-gray-500 p-4">
+            <div class="flex items-center flex-shrink-0 text-white mr-6">
+                <span class="font-semibold text-2xl tracking-widest">Logo</span>
+            </div>
+            <div class="block lg:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-neutral-50 border-neutral-50 hover:text-white hover:border-white">
+                <i class="bi bi-list"></i>
+                </button>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-lg lg:flex-grow lg:flex lg:justify-end pr-50">
+                <a href="#home" class="block mt-4 lg:inline-block lg:mt-0 text-neutral-50 hover:text-white mr-4 pr-10">
+                    Home
+                </a>
+                <a href="#profile" class="block mt-4 lg:inline-block lg:mt-0 text-neutral-50 hover:text-white mr-4 pr-10">
+                    Profile
+                </a>
+                <a href="#messageUs" class="block mt-4 lg:inline-block lg:mt-0 text-neutral-50 hover:text-white">
+                    Message Us
+                </a>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <section id="home" class="relative bg-gray-700 min-h-screen flex items-center justify-center p-4">
+                <div class="absolute inset-0 z-0">
+                    <div 
+                        class="w-full h-full bg-cover bg-center filter blur-sm" 
+                        style="background-image: url('img/gunung.jpg');"
+                    ></div>
+                </div>
+                <div class="relative z-10 text-center">
+                    <h1 id="welcomeMessage" class="text-4xl font-bold text-white mb-4 ">Hi User, Welcome To Website</h1>
+                    <p class="text-xl text-white b">
+                        ini adalah website latihan pertama
+                    </p>
+                </div>
+            </section>
+            <section id="profile" class="p-10 bg-white">
+                <div class="container mx-auto">
+                    <h2 class="text-3xl font-bold text-center mb-8">My Profile</h2>   
+                    <p class="text-center mb-10 max-w-2xl mx-auto">
+                        Halo, saya Farhan, seorang pengembang web pemula yang fokus pada front-end development. Saya senang belajar teknologi baru seperti Tailwind CSS dan membangun website yang responsif dan menarik.
+                    </p>
+                    <ul class="flex flex-wrap justify-center gap-4">
+                        <li class="flex items-center bg-gray-100 p-4 rounded-lg shadow-md">
+                            <img src="img/HTML & CSS.png" alt="" class="w-13 h-6 mr-2">
+                            <span class="text-gray-800">HTML & CSS</span>
+                        </li>
+                        <li class="flex items-center bg-gray-100 p-4 rounded-lg shadow-md">
+                            <img src="img/Tailwind.png" alt="" class="w-6 h-6 mr-2">
+                            <span class="text-gray-800">Tailwind CSS</span>
+                        </li>
+                        <li class="flex items-center bg-gray-100 p-4 rounded-lg shadow-md">
+                            <img src="img/Javascript.webp" alt="" class="w-6 h-6 mr-2">
+                            <span class="text-gray-800">JavaScript</span>
+                        </li>
+                        <li class="flex items-center bg-gray-100 p-4 rounded-lg shadow-md">
+                            <img src="img/git.png" alt="" class="w-6 h-6 mr-2">
+                            <span class="text-gray-800">Basic Git</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="messageUs" class="p-10 bg-gray-50">
+                <div class="container mx-auto flex flex-col lg:flex-row gap-8 justify-center">
+
+                    <div class="w-full lg:w-5/12 bg-white p-6 rounded-lg shadow-md">
+                        <h2 class="text-2xl font-bold mb-4">Message Us</h2>
+                        <form id="messageForm" class="space-y-4">
+                            <div>
+                                <label for="nama" class="block text-sm font-medium text-gray-700">Nama</label>
+                                <input type="text" id="nama" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm">
+                            </div>
+                            <div>
+                                <label for="tanggalLahir" class="block text-sm font-medium text-gray-700">Tanggal Lahir</label>
+                                <input type="date" id="tanggalLahir" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700">Jenis Kelamin</label>
+                                <div class="mt-1 flex items-center space-x-4">
+                                    <input type="radio" id="lakiLaki" name="jenisKelamin" value="Laki-Laki" required class="h-4 w-4">
+                                    <label for="lakiLaki">Laki-Laki</label>
+                                    <input type="radio" id="perempuan" name="jenisKelamin" value="Perempuan" class="h-4 w-4">
+                                    <label for="perempuan">Perempuan</label>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="pesan" class="block text-sm font-medium text-gray-700">Pesan</label>
+                                <textarea id="pesan" rows="3" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"></textarea>
+                            </div>  
+                            <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                                Kirim Pesan
+                            </button>
+                        </form>
+                    </div>
+                    <div id="outputArea" class="w-full lg:w-5/12 bg-green-100 border-l-4 border-green-500 text-green-700 p-6 rounded-lg shadow-md h-fit hidden" role="alert">
+                        <p class="font-bold">Data Terkirim:</p>
+                        <div id="outputDetails" class="text-sm mt-2"></div>
+                    </div>
+
+                </div> 
+            </section>
+
+        </main>
+    </header>
+    <script src="js/script.js"></script>
+</body>
+</html>
